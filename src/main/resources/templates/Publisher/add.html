@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Издательство</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--<style>-->
+<!--  .center {-->
+<!--    margin: 0;-->
+<!--    position: absolute;-->
+<!--    top: 50%;-->
+<!--    left: 50%;-->
+<!--    -ms-transform: translate(-50%, -50%);-->
+<!--    transform: translate(-50%, -50%);-->
+<!--  }-->
+<!--</style>-->
+<body class="text-center ">
+
+  <form th:action="${'/Publisher/add'}" method="post">
+    <input type="text" name="name" placeholder="Введите название издательства">
+    <input type="number" name="opening_year" placeholder="Введите год основания">
+    <input type="text" name="name_director" placeholder="Введите ФИО директора">
+    <input type="checkbox" name="open_now" placeholder="Открыт ли он сейчас">
+    <input type="number" name="share_price" placeholder="Введите стоимость">
+
+    <br>
+    <button type="submit">Добавить книгу</button>
+  </form>
+</body>
+</html>

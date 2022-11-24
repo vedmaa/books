@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+
+<body>
+<form action="${'/'}">
+<h1>Все книги</h1>
+
+<a href="/books/filter">Поиск книг</a>
+<a href="/books/add">Добавить книгу</a>
+<div th:each="el : ${books}">
+    <h3 th:text="${el.name}"></h3>
+    <p th:text="${el.autor}"></p>
+    <br>
+    <a th:href="'/books/' + ${el.id}">Подробнее</a>
+</div>
+
+</form>
+</body>
+</html>
